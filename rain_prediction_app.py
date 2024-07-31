@@ -21,9 +21,9 @@ def get_user_input():
         'Witchcliffe', 'PearceRAAF', 'PerthAirport', 'Perth', 'SalmonGums', 'Walpole',
         'Hobart', 'Launceston', 'AliceSprings', 'Darwin', 'Katherine', 'Uluru'
     ])
-    min_temp = st.slider('Minimum Temp', min_value=-10.0, max_value=50.0, value=10.0)
-    max_temp = st.slider('Maximum Temp', min_value=-10.0, max_value=50.0, value=10.0)
-    rainfall = st.number_input('Rainfall', min_value=0.0, max_value=500.0, value=0.0)
+    min_temp = st.slider('Minimum Temp', min_value=-10.0, max_value=50.0, value=10.0,step=1)
+    max_temp = st.slider('Maximum Temp', min_value=-10.0, max_value=50.0, value=10.0,step=1)
+    rainfall = st.number_input('Rainfall', min_value=0.0, max_value=500.0, value=0.0,step=1)
     evaporation = st.number_input('Evaporation', min_value=0.0, max_value=200.0, value=5.0)
     sunshine = st.number_input('Sunshine', min_value=0.0, max_value=24.0, value=7.0)
     wind_gust_dir = st.selectbox('WindGust direction', [
