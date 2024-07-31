@@ -23,32 +23,32 @@ def get_user_input():
     ])
     min_temp = st.slider('Minimum Temp', min_value=-10.0, max_value=50.0, value=10.0,step=1.0)
     max_temp = st.slider('Maximum Temp', min_value=-10.0, max_value=50.0, value=10.0,step=1.0)
-    rainfall = st.number_input('Rainfall', min_value=0.0, max_value=500.0, value=0.0,step=1.0)
-    evaporation = st.number_input('Evaporation', min_value=0.0, max_value=200.0, value=5.0)
+    rainfall = st.number_input('Rainfall', min_value=0.0, max_value=500.0, value=0.0,step=5.0)
+    evaporation = st.number_input('Evaporation', min_value=0.0, max_value=200.0, value=5.0,step=10.0)
     sunshine = st.number_input('Sunshine', min_value=0.0, max_value=24.0, value=7.0)
     wind_gust_dir = st.selectbox('WindGust direction', [
         'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'
     ])
-    wind_gust_speed = st.number_input('WindGust Speed', min_value=0.0, max_value=200.0, value=30.0)
+    wind_gust_speed = st.number_input('WindGust Speed', min_value=0.0, max_value=200.0, value=30.0,step=10.0)
     wind_dir_9am = st.selectbox('Wind direction at 9am', [
         'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'
     ])
     wind_dir_3pm = st.selectbox('Wind direction at 3pm', [
         'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'
     ])
-    wind_speed_9am = st.number_input('WindSpeed at 9am (km/h)', min_value=0.0, max_value=150.0, value=10.0)
-    wind_speed_3pm = st.number_input('WindSpeed at 3pm (km/h)', min_value=0.0, max_value=150.0, value=15.0)
-    humidity_9am = st.number_input('Humidity at 9am (%)', min_value=0.0, max_value=100.0, value=60.0)
-    humidity_3pm = st.number_input('Humidity at 3pm (%)', min_value=0.0, max_value=100.0, value=50.0)
-    pressure_9am = st.number_input('Pressure at 9am (hPa)', min_value=800.0, max_value=1100.0, value=1010.0)
-    pressure_3pm = st.number_input('Pressure at 3pm (hPa)', min_value=800.0, max_value=1100.0, value=1005.0)
-    cloud_9am = st.number_input('Cloud_9am (oktas)', min_value=0.0, max_value=8.0, value=3.0)
-    cloud_3pm = st.number_input('Cloud_3pm (oktas)', min_value=0.0, max_value=8.0, value=4.0)
-    temp_9am = st.number_input('Temperature at 9am (°C)', min_value=-10.0, max_value=50.0, value=15.0)
-    temp_3pm = st.number_input('Temperature at 3pm (°C)', min_value=-10.0, max_value=50.0, value=20.0)
+    wind_speed_9am = st.number_input('WindSpeed at 9am (km/h)', min_value=0.0, max_value=150.0, value=10.0,step=10.0)
+    wind_speed_3pm = st.number_input('WindSpeed at 3pm (km/h)', min_value=0.0, max_value=150.0, value=15.0,step=10.0)
+    humidity_9am = st.number_input('Humidity at 9am (%)', min_value=0.0, max_value=100.0, value=60.0,step=5.0)
+    humidity_3pm = st.number_input('Humidity at 3pm (%)', min_value=0.0, max_value=100.0, value=50.0,step=5.0)
+    pressure_9am = st.number_input('Pressure at 9am (hPa)', min_value=800.0, max_value=1100.0, value=1010.0,step=20.0)
+    pressure_3pm = st.number_input('Pressure at 3pm (hPa)', min_value=800.0, max_value=1100.0, value=1005.0,step=20.0)
+    cloud_9am = st.number_input('Cloud_9am (oktas)', min_value=0.0, max_value=8.0, value=3.0,step=1.0)
+    cloud_3pm = st.number_input('Cloud_3pm (oktas)', min_value=0.0, max_value=8.0, value=4.0,step=1.0)
+    temp_9am = st.number_input('Temperature at 9am (°C)', min_value=-10.0, max_value=50.0, value=15.0,step=1.0)
+    temp_3pm = st.number_input('Temperature at 3pm (°C)', min_value=-10.0, max_value=50.0, value=20.0,step=1.0)
     rain_today = st.selectbox('RainToday', ['No', 'Yes'])
-    day = st.number_input('Day', min_value=1, max_value=31, value=1)
-    month = st.number_input('Month', min_value=1, max_value=12, value=1)
+    day = st.number_input('Day', min_value=1, max_value=31, value=1,step=1)
+    month = st.number_input('Month', min_value=1, max_value=12, value=1,step=1)
     year = st.number_input('Year', min_value=2000, max_value=2024, value=2024)
 
     user_data = {
